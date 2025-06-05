@@ -1,5 +1,3 @@
-export *
-
 const bg = document.createElement('div');
 bg.style = "background: #42464d;  border-bottom: 1px solid rgba(255, 255, 255, 0.12);";
 const bgButtons = document.createElement('div');

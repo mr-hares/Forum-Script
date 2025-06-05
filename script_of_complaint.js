@@ -1,3 +1,5 @@
+console.log("123");
+
 const UNACCEPT_MOVE = 2213;
 const ACCEPT_MOVE = 2211;
 const UNACCEPT_PREFIX = 4; // Prefix that will be set when thread closes
@@ -1194,8 +1196,6 @@ if ($('.fr-element.fr-view p').text() === ' ') $('.fr-element.fr-view p').empty(
 
     $('.fr-element.fr-view > p').empty();
     $('span.fr-placeholder').empty();
-    const authorName = $('a.username').html();
-    console.log(typeof(authorName))
     $('div.fr-element.fr-view > p').last().append(template(data));
     $('a.overlay-titleCloser').trigger('click');
 

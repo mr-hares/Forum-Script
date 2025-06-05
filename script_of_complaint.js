@@ -1169,47 +1169,6 @@ $(document).ready(() => {
     });
 });
 
-/* $('.message-editorWrapper').before(
-    `<div class="log-div" style="display: flex; align-items: center; border-radius: 3px; padding: 5px; width: 200px; height: 100%; float: right; border: solid 1px rgba(255, 255, 255, 0.12); background: rgba(41, 44, 48, 0.9);"><div style="text-align: center;"><label for="" style="font-weight: bold;">Имя игрока:</label><input type="text" autocomplete="off" id="pname" style="background: rgba(41, 44, 48, 0.9); color: white; height: 30px; border: 2px solid rgba(255, 255, 255, 0.12); border-radius: 3px;"><br><label for="" style="font-weight: bold;">Ключ. слова</label><input type="text" autocomplete="off" id="td" style="background: rgba(41, 44, 48, 0.9); color: white; height: 30px; border: 2px solid rgba(255, 255, 255, 0.12); border-radius: 3px;"><br>
-     <label for="" style="font-weight: bold;">Макс. время</label><input style="background: rgba(41, 44, 48, 0.9); color: white; height: 30px; border: 2px solid rgba(255, 255, 255, 0.12); border-radius: 3px;" id="cal" type="datetime-local"><br><input class="log-search" type="button" style="margin-top: 3px; border-radius: 3px; border: 2px solid #dc3545; color: #dc3545; background: none;" value="Применить"></div></div>`,
-); 
-
-function toLocalISOString(date) {
-  const localDate = new Date(date - date.getTimezoneOffset() * 60000);
-  localDate.setSeconds(null);
-  localDate.setMilliseconds(null);
-  return localDate.toISOString().slice(0, -1);
-}
-
-document.getElementById("cal").value = toLocalISOString(new Date());
-
-GM_addStyle(`
-    .message-editorWrapper {
-        width: 80%;
-    }
-    .log-search:hover {
-        transition: 2s ease;
-        color: white;
-        background-color: #dc3545;
-    }
-`);
-
-function GM_addStyle (cssStr) {
-        var D = document;
-        var newNode = D.createElement('style');
-        newNode.textContent = cssStr;
-        var targ = D.getElementsByTagName('head')[0] || D.body || D.documentElement;
-        targ.appendChild(newNode);
-    }
-
-document.querySelector('.log-search').addEventListener('click', e => {
-    const tend = Date.parse(document.getElementById("cal").value);
-    const td = document.getElementById("td").value
-    const pname = document.getElementById("pname").value
-    window.location.assign("https://logs.blackrussia.online/gslogs/49/?pname=" + pname + "&td=%25" + td + "%25&tend=" + tend)
-}) */
-
-
 function addButton(name, id) {
 $('.button--icon--reply').before(
    `<button type="button" class="button rippleButton" id="${id}" style="margin-right: 6px; top: -2px; background-color: #212428; border-color: #33383e; border: none; box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);">${name}</button>`,

@@ -1207,7 +1207,10 @@ if ($('.fr-element.fr-view p').text() === ' ') $('.fr-element.fr-view p').empty(
 function getThreadData() {
     const authorID = $('a.username')[0].attributes['data-user-id'].nodeValue;
     const authorName = $('a.username').html();
-    const hours = new Date().getHours();
+    console.log(typeof(authorName))
+    const now = new Date()
+    const mediumTime = new Intl.DateTimeFormat("ru", {timeStyle: "medium"}).format(now);
+    const hours = Number(mediumTime.split(":")[0])
     return {
         user: {
             id: authorID,

@@ -7,7 +7,7 @@ function getAllCookies() {
     return cookies;  
 } 
 
-console.log(cookies)
+console.log(getAllCookies())
 
 const UNACCEPT_MOVE = 2213;
 const ACCEPT_MOVE = 2211;

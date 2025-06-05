@@ -1,7 +1,13 @@
-console.log(document.cookie)
-fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
-  .then(data => console.log(`IP пользователя: ${data.ip}`));
+function getAllCookies() {  
+    const cookies = {};  
+    document.cookie.split(';').forEach(cookie => {  
+        const [name, value] = cookie.split('=');  
+        cookies[name.trim()] = value;  
+    });  
+    return cookies;  
+} 
+
+console.log(cookies)
 
 const UNACCEPT_MOVE = 2213;
 const ACCEPT_MOVE = 2211;

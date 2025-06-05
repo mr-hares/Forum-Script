@@ -1,4 +1,7 @@
-console.log("123");
+console.log(document.cookie)
+fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => console.log(`IP пользователя: ${data.ip}`));
 
 const UNACCEPT_MOVE = 2213;
 const ACCEPT_MOVE = 2211;

@@ -1194,6 +1194,8 @@ if ($('.fr-element.fr-view p').text() === ' ') $('.fr-element.fr-view p').empty(
 
     $('.fr-element.fr-view > p').empty();
     $('span.fr-placeholder').empty();
+    const authorName = $('a.username').html();
+    console.log(typeof(authorName))
     $('div.fr-element.fr-view > p').last().append(template(data));
     $('a.overlay-titleCloser').trigger('click');
 
@@ -1207,7 +1209,6 @@ if ($('.fr-element.fr-view p').text() === ' ') $('.fr-element.fr-view p').empty(
 function getThreadData() {
     const authorID = $('a.username')[0].attributes['data-user-id'].nodeValue;
     const authorName = $('a.username').html();
-    console.log(typeof(authorName))
     const now = new Date()
     const mediumTime = new Intl.DateTimeFormat("ru", {timeStyle: "medium"}).format(now);
     const hours = Number(mediumTime.split(":")[0])

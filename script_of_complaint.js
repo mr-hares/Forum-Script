@@ -1,14 +1,3 @@
-function getAllCookies() {  
-    const cookies = {};  
-    document.cookie.split(';').forEach(cookie => {  
-        const [name, value] = cookie.split('=');  
-        cookies[name.trim()] = value;  
-    });  
-    return cookies;  
-} 
-
-console.log(getAllCookies())
-
 const UNACCEPT_MOVE = 2213;
 const ACCEPT_MOVE = 2211;
 const UNACCEPT_PREFIX = 4; // Prefix that will be set when thread closes
